@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails',  '3.2.8'
 gem 'devise', '2.1.0'
 gem 'pg'
-gem 'jbuilder'
+gem 'jbuilder', :git => 'git://github.com/rails/jbuilder.git'
 gem 'jquery-rails'
 
 # Gems used only for assets and not required
