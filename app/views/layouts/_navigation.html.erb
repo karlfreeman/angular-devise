@@ -1,8 +1,10 @@
-<%= link_to "Home", root_path, :class => 'brand' %>
 <ul class="nav">
+    <li>
+    <%= link_to "Home", root_path %>
+    </li>
   <% if user_signed_in? %>
     <li>
-    <%= link_to 'Logout', destroy_user_session_path, :method=>'delete' %>        
+    <%= link_to 'Logout', destroy_user_session_path, :method=>'get' %>
     </li>
   <% else %>
     <li>

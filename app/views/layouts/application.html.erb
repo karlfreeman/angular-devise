@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Angular Devise" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Angular Devise" %>">
+    <link rel="shortcut icon" href="<%= asset_path("brand/favicon.ico") %>" type="image/x-icon" />
     <%= stylesheet_link_tag "libs", :media => "all" %>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "libs" %>
@@ -15,6 +16,7 @@
     <header class="navbar navbar-fixed-top">
       <nav class="navbar-inner">
         <div class="container">
+          <a class="brand" href="/"><%= image_tag("brand/brand.png") %></a>
           <%= render 'layouts/navigation' %>
         </div>
       </nav>
