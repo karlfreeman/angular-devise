@@ -13,23 +13,29 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top">
-      <nav class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/"><%= image_tag("brand/brand.png") %></a>
-          <%= render 'layouts/navigation' %>
-        </div>
-      </nav>
-    </header>
     <div id="main" role="main">
       <div class="container">
         <div class="content">
-           <div class="row">
+          <div class="row">
             <div class="span12">
               <%= render 'layouts/messages' %>
-              <%= yield %>
             </div>
           </div>
+          <div class="row">
+            <div class="span12">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <a class="brand" href="http://angularjs.org/" target="_blank"><%= image_tag("brand/brand.png", :size => "32x32") %></a>
+                  <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%= yield %>
           <footer>
           </footer>
         </div>
