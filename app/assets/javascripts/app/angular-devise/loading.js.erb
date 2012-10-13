@@ -1,0 +1,21 @@
+/*
+  cribbed from http://jsfiddle.net/niden/86L5p
+*/
+App.config(['$httpProvider', function ($httpProvider) {
+  $httpProvider.responseInterceptors.push('HttpSpinnerInterceptor');
+  $httpProvider.defaults.transformRequest.push(function (data, headersGetter) {
+    angular.element('.brand img').attr("src","<%= asset_path('brand/brand.gif') %>");
+    return data;
+  });
+}]);
+App.factory('HttpSpinnerInterceptor', function ($q, $window) {
+  return function (promise) {
+    return promise.then(function (response) {
+      angular.element('.brand img').attr("src","<%= asset_path('brand/brand.png') %>");
+      return response;
+    }, function (response) {
+      angular.element('.brand img').attr("src","<%= asset_path('brand/brand.png') %>");
+      return $q.reject(response);
+    });
+  };
+});

@@ -1,4 +1,8 @@
-common: &common
+sqlite: &sqlite
+  adapter: sqlite3
+  verbosity: quiet
+
+postgresql: &postgresql
   adapter: postgresql
   encoding: utf8
   pool: 5
@@ -6,13 +10,13 @@ common: &common
   password: password
 
 test:
-  <<: *common
-  database: angular_devise_test
+  <<: *sqlite
+  database: tmp/dbs/angular_devise_test.db
 
 development:
-  <<: *common
-  database: angular_devise_development
+  <<: *sqlite
+  database: tmp/dbs/angular_devise_development.db
 
 production:
-  <<: *common
+  <<: *postgresql
   database: angular_devise_production

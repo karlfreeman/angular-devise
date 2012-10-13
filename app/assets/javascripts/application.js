@@ -1,2 +1,2 @@
-//= require_tree ./angular
+//= require ./app/index
 //= require_self
