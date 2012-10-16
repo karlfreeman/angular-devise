@@ -1,4 +1,4 @@
-//= require ./angular-devise/index
+//= require ./app/index
 //= require_tree ./services
 //= require_tree ./directives
 //= require_tree ./filters
