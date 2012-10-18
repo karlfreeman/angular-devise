@@ -1,7 +1,7 @@
 // 
 App.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {templateUrl: '<%= asset_path "home.html" %>'});
-  $routeProvider.when('/register', {templateUrl: '<%= asset_path "register.html" %>', controller: RegistrationController});
-  $routeProvider.when('/login', {templateUrl: '<%= asset_path "login.html" %>', controller: SessionController});
+  $routeProvider.when('/register', {templateUrl: '<%= asset_path "registrations/new.html" %>', controller: RegistrationsController});
+  $routeProvider.when('/login', {templateUrl: '<%= asset_path "sessions/new.html" %>', controller: SessionsController});
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
