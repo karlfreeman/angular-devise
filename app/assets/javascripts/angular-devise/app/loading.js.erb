@@ -8,6 +8,7 @@ App.config(['$httpProvider', function ($httpProvider) {
     return data;
   });
 }]);
+
 App.factory('HttpSpinnerInterceptor', function ($q, $window) {
   return function (promise) {
     return promise.then(function (response) {
