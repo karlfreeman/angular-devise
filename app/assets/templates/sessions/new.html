@@ -1,1 +1,29 @@
 <h1>Login</h1>
+<form name="myForm" ng-submit="create()">
+  <div class="control-group">
+    <label class="control-label" for="userEmail">Email</label>
+    <div class="controls">
+      <input type="email" id="userEmail" name="userEmail" placeholder="Email" ng-model="user.email" ng-minlength="2" required>
+    </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="userPassword">Password</label>
+      <div class="controls">
+        <input type="password" id="userPassword" name="userPassword" placeholder="Password" ng-model="user.password" ng-minlength="2" password-validate required>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <button type="submit" class="btn">Login</button>
+      </div>
+  </div>
+  <hr>
+  <tt>myForm.userEmail.$valid = {{myForm.userEmail.$valid}}</tt><br>
+  <tt>myForm.userEmail.$error = {{myForm.userEmail.$error}}</tt><br>
+  <tt>myForm.userPassword.$valid = {{myForm.userPassword.$valid}}</tt><br>
+  <tt>myForm.userPassword.$error = {{myForm.userPassword.$error}}</tt><br>
+  <tt>myForm.$valid = {{myForm.$valid}}</tt><br>
+  <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br>
+  <tt>myForm.$error.minlength = {{!!myForm.$error.minlength}}</tt><br>
+  <tt>myForm.$error.maxlength = {{!!myForm.$error.maxlength}}</tt><br>
+</form>​

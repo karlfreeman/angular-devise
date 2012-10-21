@@ -9,7 +9,6 @@ directive('activeLink', ['$location', function(location) {
       scope.location = location;
       var link = element.find('a');
       scope.$watch('location.path()', function(newPath) {
-        console.log(link.attr('href'), newPath);
           if (link.attr('href') === newPath) {
               element.addClass('active');
           } else {

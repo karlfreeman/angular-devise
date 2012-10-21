@@ -1,5 +1,7 @@
 // Declare app level module which depends on filters, and services
-angular.module('angularDevise.filters', []);
-angular.module('angularDevise.services', []);
+angular.module('angularDevise.resources', ['ngResource']);
+angular.module('angularDevise.services', ['ngResource']);
 angular.module('angularDevise.directives', []);
-var App = angular.module('angularDevise', ['angularDevise.filters', 'angularDevise.services', 'angularDevise.directives']);
+angular.module('angularDevise.filters', []);
+angular.module('angularDevise.controllers', []);
+var App = angular.module('angularDevise', ['angularDevise.resources', 'angularDevise.services', 'angularDevise.directives', 'angularDevise.filters', 'angularDevise.controllers']);
