@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="angularDevise">
+<html ng-app="angularDevise" ng-init="current_user = <%= current_user.to_json %>;">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Angular Devise" %></title>

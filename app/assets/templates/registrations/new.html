@@ -1,35 +1,36 @@
-<h1>Register</h1>
+<h1>Sign up</h1>
 <form name="myForm" ng-submit="create()">
   <div class="control-group">
-    <label class="control-label" for="userEmail">Email</label>
+    <label class="control-label" for="email">Email</label>
     <div class="controls">
-      <input type="email" id="userEmail" name="userEmail" placeholder="Email" ng-model="user.email" ng-minlength="2" required>
+      <input type="email" id="email" name="email" placeholder="Email" ng-model="registration.email" ng-minlength="2" required>
     </div>
     </div>
     <div class="control-group">
-      <label class="control-label" for="userPassword">Password</label>
+      <label class="control-label" for="password">Password</label>
       <div class="controls">
-        <input type="password" id="userPassword" name="userPassword" placeholder="Password" ng-model="user.password" ng-minlength="2" password-validate required>
+        <input type="password" id="password" name="password" placeholder="Password" ng-model="registration.password" ng-minlength="2" password-validate required>
       </div>
     </div>
     <div class="control-group">
-      <label class="control-label" for="userPasswordConfirmation">Password Confirmation</label>
+      <label class="control-label" for="password_confirmation">Password</label>
       <div class="controls">
-        <input type="password" id="userPasswordConfirmation" name="userPasswordConfirmation" placeholder="Password" ng-model="user.password" ng-minlength="2" password-validate required>
+        <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Password" ng-model="registration.password_confirmation" ng-minlength="2" password-validate required>
       </div>
     </div>
     <div class="control-group">
       <div class="controls">
-        <button type="submit" class="btn">Sign Up</button>
+        <button type="submit" class="btn">Sign up</button>
       </div>
   </div>
   <hr>
-  <tt>myForm.userEmail.$valid = {{myForm.userEmail.$valid}}</tt><br>
-  <tt>myForm.userEmail.$error = {{myForm.userEmail.$error}}</tt><br>
-  <tt>myForm.userPassword.$valid = {{myForm.userPassword.$valid}}</tt><br>
-  <tt>myForm.userPassword.$error = {{myForm.userPassword.$error}}</tt><br>
-  <tt>myForm.userPasswordConfirmation.$valid = {{myForm.userPasswordConfirmation.$valid}}</tt><br>
-  <tt>myForm.userPasswordConfirmation.$error = {{myForm.userPasswordConfirmation.$error}}</tt><br>
+  <tt>{{registration}}</tt><br>
+  <tt>myForm.email.$valid = {{myForm.email.$valid}}</tt><br>
+  <tt>myForm.email.$error = {{myForm.email.$error}}</tt><br>
+  <tt>myForm.password.$valid = {{myForm.password.$valid}}</tt><br>
+  <tt>myForm.password.$error = {{myForm.password.$error}}</tt><br>
+  <tt>myForm.password_confirmation.$valid = {{myForm.password_confirmation.$valid}}</tt><br>
+  <tt>myForm.password_confirmation.$error = {{myForm.password_confirmation.$error}}</tt><br>
   <tt>myForm.$valid = {{myForm.$valid}}</tt><br>
   <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br>
   <tt>myForm.$error.minlength = {{!!myForm.$error.minlength}}</tt><br>

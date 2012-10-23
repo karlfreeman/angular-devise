@@ -6,8 +6,13 @@ angular.module('angularDevise.resources').factory('UserSession', function($http)
   };
 
   UserSession.prototype.$save = function() {
-    data = { "user" : { "email" : this.email, "password" : this.password, "remember_me" : this.remember_me ? 1 : 0 }, "utf8" : "✓", "commit" : "Sign in"} ;
-    return $http.post('/users/sign_in', data);
+    return $http.post('/users/sign_in', {
+      "user" : {
+        "email" : this.email,
+        "password" : this.password,
+        "remember_me" : this.remember_me ? 1 : 0
+      }
+    });
   };
 
   UserSession.prototype.$destroy = function() {
@@ -18,8 +23,23 @@ angular.module('angularDevise.resources').factory('UserSession', function($http)
 
 });
 
+//
+angular.module('angularDevise.resources').factory('UserRegistration', function($http) {
 
-// //
-// angular.module('angularDevise.resources').factory('UserRegistration', function($resource) {
-//   return $resource('/users/sign_up.json', {});
-// });
+  var UserRegistration = function(options) {
+    angular.extend(this, options);
+  };
+
+  UserRegistration.prototype.$save = function() {
+    return $http.post('/users', {
+      "user" : {
+        "email" : this.email,
+        "password" : this.password,
+        "password_confirmation" : this.password_confirmation
+      }
+    });
+  };
+
+  return UserRegistration;
+
+});
