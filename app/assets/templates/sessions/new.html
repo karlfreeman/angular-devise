@@ -1,16 +1,21 @@
 <h1>Login</h1>
 <form name="myForm" ng-submit="create()">
   <div class="control-group">
-    <label class="control-label" for="userEmail">Email</label>
+    <label class="control-label" for="email">Email</label>
     <div class="controls">
-      <input type="email" id="userEmail" name="userEmail" placeholder="Email" ng-model="user.email" ng-minlength="2" required>
+      <input type="email" id="email" name="email" placeholder="Email" ng-model="session.email" ng-minlength="2" required>
     </div>
     </div>
     <div class="control-group">
-      <label class="control-label" for="userPassword">Password</label>
+      <label class="control-label" for="password">Password</label>
       <div class="controls">
-        <input type="password" id="userPassword" name="userPassword" placeholder="Password" ng-model="user.password" ng-minlength="2" password-validate required>
+        <input type="password" id="password" name="password" placeholder="Password" ng-model="session.password" ng-minlength="2" password-validate required>
       </div>
+    </div>
+    <div class="control-group">
+      <label class="checkbox" for="remember_me">
+        <input type="checkbox" id="remember_me" name="remember_me" ng-model="session.remember_me"> Remember Me
+      </label>
     </div>
     <div class="control-group">
       <div class="controls">
@@ -18,10 +23,11 @@
       </div>
   </div>
   <hr>
-  <tt>myForm.userEmail.$valid = {{myForm.userEmail.$valid}}</tt><br>
-  <tt>myForm.userEmail.$error = {{myForm.userEmail.$error}}</tt><br>
-  <tt>myForm.userPassword.$valid = {{myForm.userPassword.$valid}}</tt><br>
-  <tt>myForm.userPassword.$error = {{myForm.userPassword.$error}}</tt><br>
+  {{session}}
+  <tt>myForm.email.$valid = {{myForm.email.$valid}}</tt><br>
+  <tt>myForm.email.$error = {{myForm.email.$error}}</tt><br>
+  <tt>myForm.password.$valid = {{myForm.password.$valid}}</tt><br>
+  <tt>myForm.password.$error = {{myForm.password.$error}}</tt><br>
   <tt>myForm.$valid = {{myForm.$valid}}</tt><br>
   <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br>
   <tt>myForm.$error.minlength = {{!!myForm.$error.minlength}}</tt><br>
