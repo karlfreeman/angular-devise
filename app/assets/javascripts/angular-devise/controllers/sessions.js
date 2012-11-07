@@ -1,10 +1,17 @@
 //
-angular.module('angularDevise.controllers').controller('SessionsController', ['$scope', '$location', 'UserSession', function($scope, $location, UserSession) {
+angular.module('angularDevise.controllers').controller('SessionsController', ['$scope', '$location', '$cookieStore', 'Session', function($scope, $location, $cookieStore, Session) {
   
-  $scope.session = new UserSession( { email:"foo@bar.com", password:"example", remember_me:true } );
+  $scope.session = Session.userSession;
 
   $scope.create = function() {
-    $scope.session.$save();
+
+    if ( Session.signedOut ) {
+      $scope.session.$save()
+      .success(function(data, status, headers, config) {
+        $cookieStore.put('_angular_devise_user', data);
+      });
+    }
+
   };
 
   $scope.destroy = function() {

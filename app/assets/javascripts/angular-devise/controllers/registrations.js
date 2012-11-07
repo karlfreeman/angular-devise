@@ -1,7 +1,7 @@
 //
-angular.module('angularDevise.controllers').controller('RegistrationsController', ['$scope', '$location', 'UserRegistration', function($scope, $location, UserRegistration) {
+angular.module('angularDevise.controllers').controller('RegistrationsController', ['$scope', '$location', 'Session', function($scope, $location, Session) {
 
-  $scope.registration = new UserRegistration( { email:"foo-" + Math.floor((Math.random()*10000)+1) + "@bar.com", password:"example", password_confirmation:"example" } );
+  $scope.registration = Session.userRegistration;
 
   $scope.create = function() {
     $scope.registration.$save();
