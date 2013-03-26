@@ -14,6 +14,9 @@ AngularDevise::Application.configure do
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
+  # Compress, but not to hard
+  config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(:mangle => false) }
+
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = false
 
