@@ -1,5 +1,5 @@
 //
-angular.module('angularDevise.resources').factory('UserSession', function($http) {
+angular.module('angularDevise.resources').factory('UserSession', ['$http', function($http) {
 
   var UserSession = function(options) {
     angular.extend(this, options);
@@ -21,10 +21,10 @@ angular.module('angularDevise.resources').factory('UserSession', function($http)
 
   return UserSession;
 
-});
+}]);
 
 //
-angular.module('angularDevise.resources').factory('UserRegistration', function($http) {
+angular.module('angularDevise.resources').factory('UserRegistration', ['$http', function($http) {
 
   var UserRegistration = function(options) {
     angular.extend(this, options);
@@ -42,4 +42,4 @@ angular.module('angularDevise.resources').factory('UserRegistration', function($
 
   return UserRegistration;
 
-});
+}]);
