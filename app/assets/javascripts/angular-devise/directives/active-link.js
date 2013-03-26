@@ -1,8 +1,7 @@
 /*
   cribbed from http://jsfiddle.net/p3ZMR/10/
 */
-angular.module('angularDevise.directives').
-directive('activeLink', ['$location', function(location) {
+angular.module('angularDevise.directives').directive('activeLink', ['$location', function(location) {
   return {
     restrict: 'A',
     link: function(scope, element, attrs, controller) {
