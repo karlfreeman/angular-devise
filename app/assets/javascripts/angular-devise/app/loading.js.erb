@@ -9,7 +9,7 @@ App.config(['$httpProvider', function ($httpProvider) {
   });
 }]);
 
-App.factory('HttpSpinnerInterceptor', function ($q, $window) {
+App.factory('HttpSpinnerInterceptor', ['$q', '$window', function ($q, $window) {
   return function (promise) {
     return promise.then(function (response) {
       angular.element('.brand img').attr("src","<%= asset_path('brand/brand.png') %>");
