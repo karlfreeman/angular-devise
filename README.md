@@ -4,5 +4,7 @@ An example Rails app that uses a [Angular.js] UI for user signup, authentication
 
 ↪ [heroku demo](http://angular-devise.herokuapp.com)
 
+*a work in progress...*
+
 [angular.js]: http://angularjs.org/
 [devise]: https://github.com/plataformatec/devise
