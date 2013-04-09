@@ -6,5 +6,8 @@ An example Rails app that uses a [Angular.js] UI for user signup, authentication
 
 *a work in progress...*
 
+The demo also includes [Angular-Strap.js] for boostrap specific functionality
+
+[angular-strap.js]: http://mgcrea.github.io/angular-strap/
 [angular.js]: http://angularjs.org/
 [devise]: https://github.com/plataformatec/devise
