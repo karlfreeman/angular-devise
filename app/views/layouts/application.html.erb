@@ -16,13 +16,13 @@
         <div class="content">
           <div class="row">
             <div class="span12">
-              <div class="navbar">
+              <div class="navbar" bs-navbar>
                 <div class="navbar-inner">
                   <a class="brand" href="/"><%= image_tag("brand/brand.png", :size => "32x32") %></a>
                   <ul class="nav">
-                    <li active-link><a href="/home">Home</a></li>
-                    <li active-link><a href="/register">Sign up</a></li>
-                    <li active-link><a href="/login">Login</a></li>
+                    <li data-match-route="/(:?home)"><a href="/home">Home</a></li>
+                    <li data-match-route="/register"><a href="/register">Sign up</a></li>
+                    <li data-match-route="/login"><a href="/login">Login</a></li>
                   </ul>
                 </div>
               </div>
