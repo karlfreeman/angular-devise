@@ -11,3 +11,6 @@ The demo also includes [Angular-Strap.js] for boostrap specific functionality
 [angular-strap.js]: http://mgcrea.github.io/angular-strap/
 [angular.js]: http://angularjs.org/
 [devise]: https://github.com/plataformatec/devise
+
+Bonus:
+[rails-4-angular-sorcery](https://github.com/kirs/rails-4-angular-sorcery) is another option to add authentication features to rails 4 app with Angular.
